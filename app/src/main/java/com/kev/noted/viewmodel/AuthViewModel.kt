@@ -39,6 +39,9 @@ class AuthViewModel @Inject constructor(
 	val currentUser : FirebaseUser?
 		get() = repository.currentUser
 
+	fun logout(){
+		repository.logout()
+	}
 	init {
 
 		if (repository.currentUser != null){

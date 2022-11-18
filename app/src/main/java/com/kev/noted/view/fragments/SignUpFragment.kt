@@ -84,6 +84,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
 
 				is LoadingState.Success -> {
 					binding.progressBar.visibility = View.GONE
+					Toast.makeText(requireContext(), "Account successfully created!", Toast.LENGTH_SHORT).show()
 					findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
 				}
 			}
