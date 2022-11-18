@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786128152964",
+    "project_id": "noted-aba3e",
+    "storage_bucket": "noted-aba3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786128152964:android:71deac1cad947d882b55d1",
+        "android_client_info": {
+          "package_name": "com.kev.noted"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786128152964-6fh3jfhfdukej2b71o7elmjl0ud960es.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUv73OKvww8dsFzDOwv4EsUv57NAhwtFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786128152964-6fh3jfhfdukej2b71o7elmjl0ud960es.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
