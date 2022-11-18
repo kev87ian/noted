@@ -25,7 +25,6 @@ class AuthRepositoryImpl @Inject constructor(
 				is FirebaseNetworkException -> LoadingState.Error("Ensure you have an active internet connection.")
 				else -> LoadingState.Error(e.localizedMessage!!)
 			}
-
 		}
 	}
 

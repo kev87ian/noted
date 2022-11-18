@@ -1,8 +1,8 @@
-package com.kev.noted.view
+package com.kev.noted.view.fragments
 
 import androidx.fragment.app.Fragment
 import com.kev.noted.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SignUpFragment:Fragment(R.layout.fragment_sign_up)
+class LoginFragment : Fragment(R.layout.fragment_login)
