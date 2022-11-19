@@ -20,8 +20,8 @@ class AuthRepositoryImpl @Inject constructor(
 		} catch (e: Exception) {
 			e.printStackTrace()
 			when (e) {
-				is FirebaseAuthInvalidCredentialsException -> LoadingState.Error("Invalid Credentials. Please try again.")
-				is FirebaseAuthInvalidUserException -> LoadingState.Error("No such user exists. Please check your email again.")
+				is FirebaseAuthInvalidCredentialsException -> LoadingState.Error("Wrong Password. Please try again.")
+				is FirebaseAuthInvalidUserException -> LoadingState.Error("User does not exist. Please check your email and try again.")
 				is FirebaseNetworkException -> LoadingState.Error("Ensure you have an active internet connection.")
 				else -> LoadingState.Error(e.localizedMessage!!)
 			}
@@ -43,7 +43,7 @@ class AuthRepositoryImpl @Inject constructor(
 			e.printStackTrace()
 			when (e) {
 				is FirebaseNetworkException -> LoadingState.Error("Ensure you have an active internet connection.")
-				is FirebaseAuthUserCollisionException -> LoadingState.Error("An account with this email already exists!")
+				is FirebaseAuthUserCollisionException -> LoadingState.Error("An account with this email already exists.")
 				else -> LoadingState.Error(e.localizedMessage!!)
 			}
 		}

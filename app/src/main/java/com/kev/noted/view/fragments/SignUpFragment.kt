@@ -35,6 +35,10 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
 		binding.createUser.setOnClickListener {
 			createUser()
 		}
+
+		binding.loginTv.setOnClickListener {
+			findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+		}
 	}
 
 	private fun createUser() {
@@ -75,16 +79,18 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
 			when (state) {
 				is LoadingState.Loading -> {
 					binding.progressBar.visibility = View.VISIBLE
+					binding.errorTextview.visibility = View.GONE
 				}
 
 				is LoadingState.Error -> {
 					binding.progressBar.visibility = View.GONE
-					Toast.makeText(requireContext(), state.message, Toast.LENGTH_SHORT).show()
+					binding.errorTextview.visibility = View.VISIBLE
+					binding.errorTextview.text = state.message
 				}
 
 				is LoadingState.Success -> {
-					binding.progressBar.visibility = View.GONE
 					Toast.makeText(requireContext(), "Account successfully created!", Toast.LENGTH_SHORT).show()
+					binding.progressBar.visibility = View.GONE
 					findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
 				}
 			}

@@ -1,9 +1,10 @@
-package com.kev.noted
+package com.kev.noted.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import com.kev.noted.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

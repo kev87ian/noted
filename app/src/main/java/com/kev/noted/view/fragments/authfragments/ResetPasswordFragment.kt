@@ -1,8 +1,8 @@
-package com.kev.noted.view.fragments
+package com.kev.noted.view.fragments.authfragments
 
 import androidx.fragment.app.Fragment
 import com.kev.noted.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class LoginFragment : Fragment(R.layout.fragment_login)
+class ResetPasswordFragment : Fragment(R.layout.fragment_reset_password)
