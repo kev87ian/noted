@@ -38,14 +38,14 @@
         android:textColor="@color/white" />
 
     <!--button for saving and updating a note-->
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/idBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
 
-        android:text="Button"
+        android:text="Save Note"
         android:textAllCaps="false"
         android:textColor="@color/white" />
 

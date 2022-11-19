@@ -53,7 +53,11 @@
         app:exitAnim="@anim/slide_out_left"
         app:popEnterAnim="@anim/slide_in_left"
         app:popExitAnim="@anim/slide_out_right"
-        tools:layout="@layout/fragment_notes_list" />
+        tools:layout="@layout/fragment_notes_list" >
+        <action
+            android:id="@+id/action_notesListFragment_to_newNoteFragment"
+            app:destination="@id/newNoteFragment" />
+    </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"
         android:name="com.kev.noted.view.fragments.authfragments.ResetPasswordFragment"
@@ -63,4 +67,8 @@
         app:popEnterAnim="@anim/slide_in_left"
         app:popExitAnim="@anim/slide_out_right"
         tools:layout="@layout/fragment_reset_password" />
+    <fragment
+        android:id="@+id/newNoteFragment"
+        android:name="com.kev.noted.view.fragments.notesfragments.NewNoteFragment"
+        android:label="NewNoteFragment" />
 </navigation>

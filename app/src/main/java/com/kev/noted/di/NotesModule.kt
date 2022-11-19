@@ -15,7 +15,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AuthenticationModule {
+object NotesModule {
 	@Provides
 	@Singleton
 	fun provideFirebaseAuth(): FirebaseAuth = FirebaseAuth.getInstance()
@@ -30,10 +30,9 @@ object AuthenticationModule {
 		return notesDatabase.notesDao()
 	}
 
-
 	@Provides
 	@Singleton
-	fun providesnotesDatabase(@ApplicationContext context: Context): NotesDatabase {
+	fun providesNotesDatabase(@ApplicationContext context: Context): NotesDatabase {
 		return NotesDatabase.getDbInstance(context)
 	}
 }
