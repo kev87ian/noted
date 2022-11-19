@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.kev.noted.view.fragments.SignUpFragment"
+        android:name="com.kev.noted.view.fragments.authfragments.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up">
 
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/notesListFragment"
-        android:name="com.kev.noted.view.fragments.authfragments.NotesListFragment"
+        android:name="com.kev.noted.view.fragments.notesfragments.NotesListFragment"
         android:label="fragment_notes_list"
         app:enterAnim="@anim/slide_in_right"
         app:exitAnim="@anim/slide_out_left"

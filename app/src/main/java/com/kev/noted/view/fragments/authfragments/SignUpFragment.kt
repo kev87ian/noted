@@ -1,4 +1,4 @@
-package com.kev.noted.view.fragments
+package com.kev.noted.view.fragments.authfragments
 
 import android.os.Bundle
 import android.util.Patterns
