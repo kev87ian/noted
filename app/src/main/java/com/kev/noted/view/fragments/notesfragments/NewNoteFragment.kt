@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.kev.noted.R
 import com.kev.noted.databinding.FragmentNewNoteBinding
 import com.kev.noted.model.Note
@@ -37,12 +38,14 @@ class NewNoteFragment : Fragment(R.layout.fragment_new_note) {
 		val title = binding.idEdtNoteName.text.toString().trim()
 		val description = binding.idEdtNoteDesc.text.toString().trim()
 		val date = Date()
-		val note = Note(title, description, date)
+		val note = Note(1, title, description, date)
 		if (title.isEmpty() || description.isEmpty()) {
 			Toast.makeText(requireContext(), "Ensure all fields are field", Toast.LENGTH_SHORT)
 				.show()
 		} else {
 			viewModel.insertNote(note)
+			Toast.makeText(requireContext(), "Note successfully saved", Toast.LENGTH_SHORT).show()
+			findNavController().navigate(R.id.action_newNoteFragment_to_notesListFragment)
 		}
 
 

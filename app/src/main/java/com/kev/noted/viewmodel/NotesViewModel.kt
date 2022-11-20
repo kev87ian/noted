@@ -1,5 +1,6 @@
 package com.kev.noted.viewmodel
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kev.noted.model.Note
@@ -11,9 +12,14 @@ import javax.inject.Inject
 
 @HiltViewModel
 class NotesViewModel @Inject constructor(
-	private val repository: NotesRepository
+	private val repository: NotesRepository,
+	savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
+
+/*
+	private val mealId = savedStateHandle.get<String>("mealId")
+*/
 
 	fun insertNote(note: Note) = viewModelScope.launch(Dispatchers.IO) {
 		repository.insertNote(note)
