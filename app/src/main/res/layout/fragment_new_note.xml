@@ -17,7 +17,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:hint="Enter Note Title"
-        android:textColor="@color/white" />
+      />
 
     <!--edit text for note description-->
     <EditText
@@ -35,7 +35,7 @@
         android:hint="Enter Note Details"
         android:inputType="textMultiLine"
         android:singleLine="false"
-        android:textColor="@color/white" />
+     />
 
     <!--button for saving and updating a note-->
     <com.google.android.material.button.MaterialButton

@@ -30,7 +30,7 @@ class NotesAdapter : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
 			binding.noteTitleTv.text = currentNote.noteTitle
 			binding.noteDescriptionTextview.text = currentNote.noteDescription
 			binding.lastModifiedTextview.text =
-				"Last update : ".plus(currentNote.timeStamp.time.toString())
+				"Last update : ".plus(currentNote.dateAdded.toString())
 		}
 
 
@@ -49,7 +49,7 @@ class NotesAdapter : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
 
 	private val diffUtil = object : DiffUtil.ItemCallback<Note>() {
 		override fun areItemsTheSame(oldItem: Note, newItem: Note): Boolean {
-			return oldItem.id == newItem.id
+			return oldItem.noteTitle == newItem.noteTitle
 		}
 
 		override fun areContentsTheSame(oldItem: Note, newItem: Note): Boolean {
